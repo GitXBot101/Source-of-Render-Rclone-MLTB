@@ -1,9 +1,9 @@
 from telegram.ext import CommandHandler
 
 from bot import dispatcher, BASE_URL, alive
-from bot.helper.telegram_helper.message_utils import sendMessage
-from bot.helper.telegram_helper.filters import CustomFilters
-from bot.helper.telegram_helper.bot_commands import BotCommands
+from bot.helper.ext_utils.message_utils import sendMessage
+from bot.helper.ext_utils.filters import CustomFilters
+from bot.helper.ext_utils.bot_commands import BotCommands
 
 
 def sleep(update, context):
