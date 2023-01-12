@@ -401,8 +401,8 @@ if not config_dict:
                    'VIEW_LINK': VIEW_LINK,
                    'WEB_PINCODE': WEB_PINCODE}
 
-Popen(f"gunicorn web.wserver:app --bind 0.0.0.0:8080", shell=True)
-Popen(f"gunicorn qbitweb.wserver:app --bind 0.0.0.0:8080", shell=True)
+Popen(f"gunicorn web.wserver:app --bind 0.0.0.0:10000", shell=True)
+Popen(f"gunicorn qbitweb.wserver:app --bind 0.0.0.0:10000", shell=True)
 srun(["qbittorrent-nox", "-d", "--profile=."])
 if not ospath.exists('.netrc'):
     srun(["touch", ".netrc"])
